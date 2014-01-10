@@ -11,13 +11,26 @@
     "serial",
     "flow",
     "concurrent",
-    "generators"
+    "generators",
+    "setTimeout",
+    "delay"
   ],
   "license": "MIT",
-  "repository": "fluidsonic/co-flow",
+  "homepage": "https://github.com/fluidsonic/co-flow",
+  "bugs": "https://github.com/fluidsonic/co-flow/issues",
   "author": "Marc Knaup <marc.knaup@koeln.de>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fluidsonic/co-flow.git"
+  },
   "main": "index.js",
+  "scripts": {
+    "test": "tap --harmony ./tests"
+    },
   "dependencies": {
     "co": "~3.0.2"
+  },
+  "devDependencies": {
+    "tap": "~0.4.8"
   }
 }
