@@ -1,5 +1,7 @@
+/.npmignore
 /.project
 /.settings
+/.travis.yml
 /tests
 .DS_Store
 node_modules
