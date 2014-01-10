@@ -1,0 +1,6 @@
+/.project
+/.settings
+/tests
+.DS_Store
+node_modules
+npm-debug.log

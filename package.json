@@ -1,0 +1,23 @@
+{
+  "name": "co-flow",
+  "version": "1.0.0",
+  "description": "Flexible execution flow addons (all, any, wait) for co.",
+  "keywords": [
+    "co",
+    "all",
+    "any",
+    "wait",
+    "parallel",
+    "serial",
+    "flow",
+    "concurrent",
+    "generators"
+  ],
+  "license": "MIT",
+  "repository": "fluidsonic/co-flow",
+  "author": "Marc Knaup <marc.knaup@koeln.de>",
+  "main": "index.js",
+  "dependencies": {
+    "co": "~3.0.2"
+  }
+}
