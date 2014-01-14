@@ -40,24 +40,24 @@ Returns an empty array if `runnables` evaluates to `false` or is an empty array.
 - `runnables` - An array of [runnables](https://github.com/visionmedia/co#yieldables) to be executed.
 
 - `options.concurrency` - Specifies the maximum number of runnables which will be executed concurrently (similar to tasks in a thread pool).  
-                          `true` executes all runnables in parallel and `false` is like `1` and runs all runnables serially in order.  
-                          Defaults to `true`.
+  `true` executes all runnables in parallel and `false` is like `1` and runs all runnables serially in order.  
+  Defaults to `true`.
 
 - `options.failsWhenAnyFailed` - If `true` then the function will fail if any runnable failed.  
-                                 The error of the first runnable which failed will be passed along.  
-                                 Defaults to `true`.
+  The error of the first runnable which failed will be passed along.  
+  Defaults to `true`.
 
 - `options.failsWhenAllFailed` - If `true` then the function will fail if all runnables failed.  
-                                 The error of the first runnable which failed will be passed along.  
-                                 Defaults to `false`.
+  The error of the first runnable which failed will be passed along.  
+  Defaults to `false`.
 
 - `options.structured` - If `true` then the function's result data will be wrapped with `{ error: … }` or `{ data: … }`, respectively.  
-                         Defaults to `false`.
+  Defaults to `false`.
 
 - `options.this` - Value for `this` when executing runnables or `options.unusedResultHandler`.  
 
 - `options.unusedResultHandler` - Callback for each runnable whose result was not returned by the function (due to `options.failsWhenAnyFailed` or `options.failsWhenAllFailed`).  
-                                  The callback will be called after the function returned and in the order of the runnables.
+  The callback will be called after the function returned and in the order of the runnables.
 
 #### Example
 
@@ -103,25 +103,25 @@ Returns the result data `undefined` if `runnables` evaluates to `false` or is an
 - `runnables` - An array of [runnables](https://github.com/visionmedia/co#yieldables) to be executed.
 
 - `options.concurrency` - Specifies the maximum number of runnables which will be executed concurrently (similar to tasks in a thread pool).  
-                          `true` executes all runnables in parallel and `false` is like `1` and runs all runnables serially in order.  
-                          Defaults to `true`.
+  `true` executes all runnables in parallel and `false` is like `1` and runs all runnables serially in order.  
+  Defaults to `true`.
 
 - `options.failsWhenAnyFailed` - If `true` then the function will fail as soon as any runnable failed.  
-                                 As a consequence a successful completion of the function will be delayed until all runnables have completed.  
-                                 The error of the first runnable which failed will be passed along.  
-                                 Defaults to `false`.
+  As a consequence a successful completion of the function will be delayed until all runnables have completed.  
+  The error of the first runnable which failed will be passed along.  
+  Defaults to `false`.
 
 - `options.failsWhenAllFailed` - If `true` then the function will fail if all runnables failed (instead of returning the error as result data).  
-                                 The error of the first runnable which failed will be passed along.  
-                                 Defaults to `true`.
+  The error of the first runnable which failed will be passed along.  
+  Defaults to `true`.
 
 - `options.structured` - If `true` then the function's result data will be wrapped with `{ error: … }` or `{ data: … }`, respectively.  
-                         Defaults to `false`.
+  Defaults to `false`.
 
 - `options.this` - Value for `this` when executing runnables or `options.unusedResultHandler`.  
 
 - `options.unusedResultHandler` - Callback for each runnable whose result was not returned by the function.  
-                                  The callback will be called after the function returned and all runnables have completed. It will be called in the order of the runnables.
+  The callback will be called after the function returned and all runnables have completed. It will be called in the order of the runnables.
 
 #### Example
 
