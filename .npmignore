@@ -2,6 +2,7 @@
 /.project
 /.settings
 /.travis.yml
+/examples
 /tests
 .DS_Store
 node_modules
