@@ -3,6 +3,8 @@ co-flow
 
 Flexible execution flow addons ([all](#all-runnables-options), [any](#any-runnables-options), [wait](#wait-delay)) for [co](https://github.com/visionmedia/co).
 
+[![Build Status](https://travis-ci.org/fluidsonic/co-flow.png?branch=master)](https://travis-ci.org/fluidsonic/co-flow)
+
 
 
 Quickstart
