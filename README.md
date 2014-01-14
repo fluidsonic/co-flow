@@ -5,22 +5,33 @@ Flexible execution flow addons (all, any, wait) for [co](https://github.com/visi
 
 
 
+Usage
+--------
+
+TODO
+
+
+
 Installation
 ------------
 
 	$ npm install co-flow
 
 
-Examples
---------
 
-TODO
+Requirements
+------------
+
+Node 0.11+, run with `--harmony` flag.
+
 
 
 Testing
 -------
 
-TODO
+	$ npm install
+	$ npm test
+
 
 
 License
