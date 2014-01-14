@@ -22,7 +22,7 @@
 	"lastsemic": false,
 	"latedef": false,
 	"laxbreak": false,
-	"laxcomma": true,
+	"laxcomma": false,
 	"loopfunc": false,
 	"mootools": false,
 	"multistr": false,
