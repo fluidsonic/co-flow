@@ -18,7 +18,7 @@ const wait = require('co-flow').wait;
 const allResults = yield all([runnable1, runnable2, …]);  // returns an array with the results of all runnables
 const anyResult  = yield any([runnable1, runnable2, …]);  // returns the result for the runnable which succeeded first
 
-wait(500);  // just what you expect
+yield wait(500);  // just what you expect
 ```
 
 
