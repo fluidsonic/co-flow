@@ -50,6 +50,7 @@
 	"supernew": false,
 	"trailing": true,
 	"undef": true,
+	"unused": true,
 	"validthis": false,
 	"white": false,
 	"wsh": false
