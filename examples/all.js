@@ -24,4 +24,4 @@ co(function*() {
 		// any request failed
 		console.error('Cannot load request:', e);
 	}
-})();
+});

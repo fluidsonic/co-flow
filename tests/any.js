@@ -59,7 +59,7 @@ test('any() basic functionality', function(t) {
 		catch (e) {
 			t.equal(e, fastestError, 'fails when all runnables fail');
 		}
-	})();
+	});
 });
 
 
@@ -71,7 +71,7 @@ test('any() options.concurrency', function(t) {
 		t.equal(yield any(runnablesWhereAllSucceed, { concurrency: true }),  fastestData, 'true => parallel execution = fastest runnable must win');
 		t.equal(yield any(runnablesWhereAllSucceed, { concurrency: false }), firstData,   'false => serial execution = first runnable must win');
 		t.equal(yield any(runnablesWhereAllSucceed, { concurrency: 2 }),     firstData,   '2 => threaded execution = fastest runnable in first batch must win');
-	})();
+	});
 });
 
 
@@ -89,7 +89,7 @@ test('any() options.failsWhenAnyFailed', function(t) {
 		catch (e) {
 			t.equal(e, fastestError, 'true + any fails => must fail with fastest error');
 		}
-	})();
+	});
 });
 
 
@@ -119,7 +119,7 @@ test('any() options.failsWhenAllFailed', function(t) {
 
 		t.equal(yield any(runnablesWhereFastestFails, { failsWhenAllFailed: false }), secondFastestData, 'false + fastest fails => second fastest must win');
 		t.equal(yield any(runnablesWhereAllFail,      { failsWhenAllFailed: false }), fastestError,      'false + all fail => fastest error returned');
-	})();
+	});
 });
 
 
@@ -133,7 +133,7 @@ test('any() options.structured', function(t) {
 		t.equal(yield any(runnablesWhereAllFail,        { structured: false, failsWhenAllFailed: false }), fastestError,            'false + all fail => fastest error must be returned unwrapped');
 		t.deepEqual(yield any(runnablesWhereAllSucceed, { structured: true }),                             { data: fastestData },   'true + all succeed => fastest data must be returned wrapped');
 		t.deepEqual(yield any(runnablesWhereAllFail,    { structured: true, failsWhenAllFailed: false }),  { error: fastestError }, 'true + all fail => fastest error must be returned wrapped');
-	})();
+	});
 });
 
 
@@ -158,7 +158,7 @@ test('any() options.this', function(t) {
 		yield any([runnable],         { this: context });
 		yield any([success, success], { this: context, unusedResultHandler: unusedResultHandler });
 		yield any([success, failure], { this: context, unusedResultHandler: unusedResultHandler });
-	})();
+	});
 });
 
 
@@ -192,7 +192,7 @@ test('any() options.unusedResultHandler', function(t) {
 
 	co(function*() {
 		results.push(yield any(runnables, { failsWhenAllFailed: false, structured: true, unusedResultHandler: unusedResultHandler }));
-	})();
+	});
 });
 
 
@@ -202,5 +202,5 @@ test('any() with no runnables', function(t) {
 	co(function*() {
 		t.equal(yield any(false), undefined, 'any(false) returns undefined');
 		t.equal(yield any([]),    undefined, 'any([]) returns undefined');
-	})();
+	});
 });

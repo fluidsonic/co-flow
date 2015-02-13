@@ -23,4 +23,4 @@ co(function*() {
 		// all requests failed
 		console.error('Cannot load README:', e);
 	}
-})();
+});

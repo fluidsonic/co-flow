@@ -1,6 +1,6 @@
 {
   "name": "co-flow",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Flexible execution flow addons (all, any, wait) for co.",
   "keywords": [
     "co",
@@ -26,12 +26,12 @@
   "main": "index.js",
   "scripts": {
     "test": "tap --harmony ./tests/*.js"
-    },
+  },
   "dependencies": {
-    "co": "~3.0.2"
+    "co": "~4.3.1"
   },
   "devDependencies": {
-    "co-request": "~0.1.1",
-    "tap": "~0.4.8"
+    "co-request": "~0.2.0",
+    "tap": "~0.6.0"
   }
 }

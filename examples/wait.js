@@ -16,4 +16,4 @@ co(function*() {
 	console.log('it');
 	yield wait(500);
 	console.log('says.');
-})();
+});

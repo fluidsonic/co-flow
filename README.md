@@ -87,7 +87,7 @@ co(function*() {
 		// any request failed
 		console.error('Cannot load request:', e);
 	}
-})();
+});
 ```
 
 ### any (runnables, [options])
@@ -150,7 +150,7 @@ co(function*() {
 		// all requests failed
 		console.error('Cannot load README:', e);
 	}
-})();
+});
 ```
 
 ### wait (delay)
@@ -179,7 +179,7 @@ co(function*() {
 	console.log('it');
 	yield wait(500);
 	console.log('says.');
-})();
+});
 ```
 
 

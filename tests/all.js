@@ -87,7 +87,7 @@ test('all() basic functionality', function(t) {
 		catch (e) {
 			t.equal(e, fastestError, 'fails when any runnable fails');
 		}
-	})();
+	});
 });
 
 
@@ -124,7 +124,7 @@ test('all() options.concurrency', function(t) {
 			const timeTaken4 = new Date() - startTime4;
 			t.ok(timeTaken4 >= 100 && timeTaken4 < 120, 'false => run serially (took ' + timeTaken4 + 'ms, expected ~100ms)');
 		}
-	})();
+	});
 });
 
 
@@ -149,7 +149,7 @@ test('all() options.failsWhenAnyFailed', function(t) {
 		}
 
 		t.deepEqual(yield all(runnablesWhereFastestFails, { failsWhenAnyFailed: false }), resultsWhereFastestFails, 'false + any fails => no failure');
-	})();
+	});
 });
 
 
@@ -170,7 +170,7 @@ test('all() options.failsWhenAllFailed', function(t) {
 		catch (e) {
 			t.equal(e, fastestError, 'true + all fail => failure with fastest error');
 		}
-	})();
+	});
 });
 
 
@@ -181,7 +181,7 @@ test('all() options.structured', function(t) {
 		t.deepEqual(yield all(runnablesWhereFastestFails, { failsWhenAnyFailed: false }),                    resultsWhereFastestFails,           'false => results returned unwrapped');
 		t.deepEqual(yield all(runnablesWhereFastestFails, { failsWhenAnyFailed: false, structured: false }), resultsWhereFastestFails,           'false => results returned unwrapped');
 		t.deepEqual(yield all(runnablesWhereFastestFails, { failsWhenAnyFailed: false, structured: true }),  structuredResultsWhereFastestFails, 'true => results returned wrapped');
-	})();
+	});
 });
 
 
@@ -222,7 +222,7 @@ test('all() options.this', function(t) {
 		catch (e) {
 			t.equal(e, error, 'failure is required');
 		}
-	})();
+	});
 });
 
 
@@ -255,7 +255,7 @@ test('all() options.unusedResultHandler', function(t) {
 			catch (e) {
 				t.equal(e, expectedError, testCase + ' => fails with fastest error');
 			}
-		})();
+		});
 	}
 
 	runWithConfiguration({
@@ -296,5 +296,5 @@ test('all() with no runnables', function(t) {
 	co(function*() {
 		t.deepEqual(yield all(false), [], 'all(false) returns []');
 		t.deepEqual(yield all([]),    [], 'all([]) returns []');
-	})();
+	});
 });
