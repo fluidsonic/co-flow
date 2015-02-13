@@ -59,13 +59,6 @@ const structuredResultsWhereFastestFails = [
 	{ error: fastestError }
 ];
 
-const runnablesWhereFirstFails = [
-	after(firstTime).fail(firstError),
-	after(otherTime).succeed(otherData),
-	after(secondFastestTime).succeed(secondFastestData),
-	after(fastestTime).succeed(fastestData)
-];
-
 const runnablesWhereAllSucceed = [
 	after(firstTime).succeed(firstData),
 	after(otherTime).succeed(otherData),
@@ -242,7 +235,6 @@ test('all() options.unusedResultHandler', function(t) {
 		const expectedError = configuration.expectedError;
 		const runnables = configuration.runnables;
 		const calls = [];
-		const nextCallIndex = 0;
 
 		const unusedResultHandler = function(error, data) {
 			calls.push(error ? { error: error } : { data: data });
