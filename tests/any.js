@@ -37,13 +37,6 @@ const runnablesWhereFastestFails = [
 	after(fastestTime).fail(fastestError)
 ];
 
-const runnablesWhereFirstFails = [
-	after(firstTime).fail(firstError),
-	after(otherTime).succeed(otherData),
-	after(secondFastestTime).succeed(secondFastestData),
-	after(fastestTime).succeed(fastestData)
-];
-
 const runnablesWhereAllSucceed = [
 	after(firstTime).succeed(firstData),
 	after(otherTime).succeed(otherData),
