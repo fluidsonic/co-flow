@@ -18,7 +18,7 @@
   "license": "MIT",
   "homepage": "https://github.com/fluidsonic/co-flow",
   "bugs": "https://github.com/fluidsonic/co-flow/issues",
-  "author": "Marc Knaup <marc.knaup@koeln.de>",
+  "author": "Marc Knaup <marc@knaup.koeln>",
   "repository": {
     "type": "git",
     "url": "https://github.com/fluidsonic/co-flow.git"
